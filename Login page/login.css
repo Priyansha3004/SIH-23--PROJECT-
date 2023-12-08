@@ -71,7 +71,9 @@ header {
 .btn {
     height: 60px;
     width: 300px;
-    margin: 20px auto;
+    margin-left: 100px;
+    margin-top: 18px;
+    margin-bottom: -30px;
     box-shadow: 10px 10px 30px rgba(33, 150, 243, 0.3); 
     border-radius: 50px;
     display: flex;
@@ -109,7 +111,7 @@ header {
 .form-section {
     height: 500px;
     width: 1000px;
-    padding: 20px 0;
+    padding: 10px 0;
     display: flex;
     position: relative;
     transition: all 0.5s ease-in-out;
@@ -133,16 +135,16 @@ header {
 
 
 .login-box {
-    gap: 50px;
+    gap: 20px;
 }
 
 .signup-box {
-    gap: 30px;
+    gap: 10px;
 }
 
 
 .ele {
-    height: 60px;
+    height: 42px;
     width: 400px;
     outline: none;
     border: none;
@@ -154,7 +156,7 @@ header {
 }
 
 .clkbtn {
-    height: 60px;
+    height: 50px;
     width: 150px;
     border-radius: 50px;
     background-image: linear-gradient(to right, #64b5f6, #1976d2); 
