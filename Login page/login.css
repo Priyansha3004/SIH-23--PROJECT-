@@ -25,7 +25,7 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('C:\\Users\\USER\\Desktop\\BITS BUSTERS PROJECT\\SIH-23--PROJECT-\\Login page\\2bc5e43752c04d55904ea8db56579e96.jpg');
+    background-image: url('./Loginbg.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
