@@ -84,29 +84,17 @@ body {
   width: 100%;
   z-index: 5;
   transition: 0.3s ease-in-out;
+  background-color: rgb(255, 255, 255);
 }
 
-.nav-active {
+/* .nav-active {
   background-color: #000000ad;
   backdrop-filter: blur(5px);
   box-shadow: 5px -1px 12px -5px grey;
-}
-
-header {
-  width: 100%;
-  background-image: url("../images/frontpage/welcome1.png");
-  background-position: center;
-  background-size: cover;
-  position: relative;
-  min-height: 100vh;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+} */
 
 .logo {
-  width: 100px;
+  width: 150px;
 }
 
 .hamburger {
@@ -142,7 +130,7 @@ header {
 }
 
 .links a {
-  color: cadetblue;
+  color: black;
   text-decoration: none;
   font-size: 15px;
 }
@@ -151,7 +139,7 @@ header {
   content: "";
   width: 0%;
   height: 3px;
-  background: rgb(122, 178, 231);
+  background: #6774cd;
   display: block;
   margin: auto;
   transition: 0.5s ease-in-out;
@@ -164,7 +152,7 @@ header {
 .login-button {
   border: none;
   cursor: pointer;
-  background-color: #0da1dc;
+  background-color: #6774cd;
   box-shadow: inset 0 0 0 0 #ea097f;
   border-radius: 4px;
   -webkit-border-radius: 4px;
@@ -238,6 +226,7 @@ header {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
   animation: slideIn 0.5s ease-in-out;
   z-index: 2;
+  margin-top: 15px;
 }
 
 @keyframes slideIn {
@@ -278,11 +267,11 @@ header {
 
 .menu-link li a:hover {
   z-index: 150;
-  color: rgb(30, 240, 191);
+  color: rgb(189, 202, 199);
   /* border-bottom: #011b24 1px solid; */
 }
 
-.content {
+/* .content {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -291,7 +280,7 @@ header {
   color: #fff;
   margin: auto;
   text-align: center;
-}
+} */
 
 /* Move the background and make it smaller. */
 /* Animation shown when entering the page and after the hover animation. */
@@ -325,7 +314,7 @@ header {
   }
 }
 
-.content h3 {
+/* .content h3 {
   margin-top: 1rem;
   color: rgb(0, 0, 0);
   font-family: "Roboto";
@@ -338,7 +327,7 @@ header {
   margin-left: -18px;
   color: rgb(23, 24, 24);
   text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
-}
+} */
 
 @keyframes slidebg {
   to {
@@ -367,7 +356,6 @@ header {
 nav .fa {
   display: none;
 }
-
 
 @media screen and (max-width: 800px) {
   .nav-links {
@@ -411,5 +399,131 @@ nav .fa {
 @media screen and (max-width: 460px) {
   .content h1 {
     font-size: 3rem;
+  }
+}
+
+/*hero section*/
+.content1 {
+  color: black;
+  padding-top: 160px;
+}
+
+.main-section {
+  max-width: 1280px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 0.6rem;
+  align-items: center;
+  margin: 0 auto;
+}
+.contact-left {
+  text-align: left;
+  animation: slideFormLeft 2s ease forwards;
+}
+
+@keyframes slideFormLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.section-label {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #6774cd;
+}
+.section-title {
+  font-size: 2.25rem;
+  /* padding: 1.1rem; */
+  color: red;
+}
+.section-title-2 {
+  font-size: 2.25rem;
+  /* padding: 1.1rem; */
+  color: black;
+}
+#with {
+  color: black;
+}
+.section-description {
+  font-size: 1.12rem;
+  color: grey;
+}
+
+.button-group {
+  gap: 2rem;
+  padding: 0rem;
+  padding-top: 2rem;
+  margin-top: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.patient-button,
+.pharmacy-button {
+  /* border: none; */
+  border-radius: 0.375rem;
+  background-color: rgba(128, 128, 128, 0.64);
+  transform: all 0.1s;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+.patient-button {
+  background-color: #6774cd;
+  color: white;
+}
+.pharmacy-button {
+  border-color: black;
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+
+/*image->hero section*/
+.contact-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.image-container {
+  overflow: hidden;
+  height: 57vh;
+}
+.section-image {
+  height: 100%;
+  width: 100%;
+}
+
+/*now for full screen hero section using Media query*/
+@media screen and (min-width: 768px) {
+  .main-section {
+    flex-direction: row;
+  }
+  .contact-left {
+    width: 50%;
+    text-align: left;
+  }
+  .button-group {
+    padding-left: 0px;
+  }
+  .section-title-2 {
+    font-size: 3.25rem;
+  }
+  .section-title {
+    font-size: 4rem;
+  }
+  .section-image {
+    height: 500px;
+    /* width: 700px; */
+  }
+  .pharmacy-button {
+    margin-left: 25px;
   }
 }
