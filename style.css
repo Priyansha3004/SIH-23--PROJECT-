@@ -86,15 +86,15 @@ body {
   transition: 0.3s ease-in-out;
 }
 
-/* .nav-active {
+.nav-active {
   background-color: #000000ad;
   backdrop-filter: blur(5px);
   box-shadow: 5px -1px 12px -5px grey;
-} */
+}
 
 header {
   width: 100%;
-  background-image: url("#");
+  background-image: url("../images/frontpage/welcome1.png");
   background-position: center;
   background-size: cover;
   position: relative;
@@ -106,10 +106,7 @@ header {
 }
 
 .logo {
-  width: 150px;
-}
-.navbar-brand {
-  margin-left: 50px;
+  width: 100px;
 }
 
 .hamburger {
@@ -204,6 +201,87 @@ header {
 .login-button:hover {
   box-shadow: inset 130px 0 0 0 #ea097f;
 }
+
+.menu {
+  display: none;
+  width: 100%;
+  position: absolute;
+  background-color: #fff;
+  top: 85px;
+  right: 0;
+  padding: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+}
+
+/* .menu.open {
+  display: block;
+  width: 80%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(244, 124, 124, 0.97);
+  top: 0px;
+  left: 0;
+  padding: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+  animation: slideIn 0.5s ease-in-out;
+  z-index: 100;
+} */
+.open {
+  display: block;
+  width: 70%;
+  height: 100%;
+  position: fixed;
+  background-color: rgb(56, 56, 55);
+  top: 0;
+  right: 0;
+  padding: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+  animation: slideIn 0.5s ease-in-out;
+  z-index: 2;
+}
+
+@keyframes slideIn {
+  0% {
+    right: -150px;
+  }
+
+  100% {
+    right: 0px;
+  }
+}
+
+.menu-link {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.menu-link li {
+  padding: 2rem;
+  font-weight: bolder;
+}
+
+.menu-link li:last-child {
+  padding-bottom: 0;
+}
+
+.menu-link li a {
+  color: rgb(247, 245, 245);
+  /* color:rgb(30, 240, 191); */
+  font-weight: bolder;
+  font-size: 1.15rem;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+.menu-link li a:hover {
+  z-index: 150;
+  color: rgb(30, 240, 191);
+  /* border-bottom: #011b24 1px solid; */
+}
+
 .content {
   position: absolute;
   top: 50%;
@@ -261,6 +339,13 @@ header {
   color: rgb(23, 24, 24);
   text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
 }
+
+@keyframes slidebg {
+  to {
+    background-position: 8rem;
+  }
+}
+
 .hero-btn {
   display: inline-block;
   text-decoration: none;
@@ -281,4 +366,50 @@ header {
 
 nav .fa {
   display: none;
+}
+
+
+@media screen and (max-width: 800px) {
+  .nav-links {
+    display: none;
+  }
+
+  .logo {
+    width: 60px;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .hamburger i {
+    z-index: 1000000000;
+    display: block;
+    font-size: 25px;
+  }
+}
+
+.footercontent {
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 800px) {
+  .menu.open {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 880px) and (min-width: 700px) {
+  #about h3 {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .content h1 {
+    font-size: 3rem;
+  }
 }
