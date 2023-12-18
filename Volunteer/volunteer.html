@@ -1,101 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Volunteer Dashboard</title>
-    <link rel="stylesheet" href="volunteer.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    />
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Volunteer Dashboard</title>
+  <link rel="stylesheet" href="volunteer.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
 
-  <body>
-    <header class="navbar">
-      <img src="../images/SC_logo.png" alt="Logo" class="logo" />
-      <h1>Volunteer Dashboard</h1>
-    </header>
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#about">About Us</a>
-      <a href="#opportunities">Volunteer Opportunities</a>
-      <a href="#apply">Apply to Volunteer</a>
-      <a href="#contact">Contact Us</a>
-    </nav>
-
-    <section id="home">
-      <h2>Welcome to the Hospital Volunteer Program</h2>
-      <p>
-        "Thank you for your interest in volunteering at our hospital through
-        Swasthya Connect. Your support makes a significant difference!" conveys
-        gratitude and emphasizes the importance of individuals who express
-        interest in contributing their time and effort to the hospital through
-        the Swasthya Connect.
-      </p>
-    </section>
-
-    <section id="about">
-      <h2>About Swasthya Connect</h2>
-      <p>
-        Swasthya Connect is a platform that connects passionate individuals with
-        opportunities to volunteer at our hospital. We believe in the power of
-        community service and the positive impact it can have on healthcare.
-      </p>
-      <img src="../images/volunteer/logo.png" alt="About Us Image" />
-    </section>
-
-    <section id="opportunities">
-      <h2>Volunteer Opportunities</h2>
-      <p>
-        Explore the various opportunities available for volunteering at our
-        hospital. Whether you're interested in patient care, administration, or
-        community outreach, we have a place for you.
-      </p>
-      <img
-        src="../images/volunteer/volunteer.jpg"
-        alt="Volunteer Opportunities Image"
-      />
-    </section>
-
-    <section id="apply">
-      <h2>Apply to Volunteer</h2>
-      <p>
-        If you are interested in becoming a volunteer, please fill out the
-        application form below:
-      </p>
-      <a
-        href="https://docs.google.com/forms/d/e/1FAIpQLScbdss-sC5MTn_Bdeoj3bJzfgNG2ulp5fmyqozOeJIOtEyTgw/viewform"
-        target="_blank"
-        class="apply-button"
-        >Click Here to Apply</a
-      >
-      <img src="../images/volunteer/QR Code.png" alt="QR Code" />
-    </section>
-
-    <section id="contact">
-      <h2>Contact Us</h2>
-      <p>
-        If you have any questions or need further information, feel free to
-        reach out to us:
-      </p>
-      <p><i class="fas fa-envelope"></i> Email: info@swasthyaconnect.org</p>
-      <p><i class="fas fa-phone"></i> Phone: +123 456 7890</p>
-      <p><i class="fab fa-twitter"></i> Twitter: @SwasthyaConnect</p>
-
-      <div class="contact-right">
-        <form>
-          <input type="text" name="Name" placeholder="Your Name" required />
-          <input type="email" name="E-mail" placeholder="Your Email" required />
-          <textarea
-            name="Message"
-            rows="5"
-            placeholder="Your Message"
-          ></textarea>
-          <button type="Submit" class="btn">Submit</button>
-        </form>
-      </div>
-    </section>
-    <script src="volunteer.js"></script>
-  </body>
+<body>
+	<header class="navbar">
+        <img src="logo.png" alt="Logo" class="logo">
+        <h1>Volunteer Dashboard</h1>
+	</header>
+	<nav>
+	  	<a href="#home">Home</a>
+	  	<a href="#about">About Us</a>
+	  	<a href="#opportunities">Volunteer Opportunities</a>
+	  	<a href="#apply">Apply to Volunteer</a>
+	  	<a href="#contact">Contact Us</a>
+	</nav>
+  
+	<section id="home">
+	  <h2><strong>Welcome to the Hospital Volunteer Program</strong></h2>
+	  <p>"Thank you for your interest in volunteering at our hospital through Swasthya Connect. Your support makes a significant difference!"</p>
+	</section>
+  
+	<section id="about">
+    <h2>About Swasthya Connect</h2>
+    <p>Swasthya Connect is a platform that connects passionate individuals with opportunities to volunteer at our hospital. We believe in the power of community service and the positive impact it can have on healthcare.</p>
+	</section>
+  
+	<section id="opportunities">
+	  <h2>Volunteer Opportunities</h2>
+	  <p>Explore the various opportunities available for volunteering at our hospital. Whether you're interested in patient care, administration, or community outreach, we have a place for you.</p>
+    <img src="volunteer.jpg" alt="Volunteer Opportunities Image">
+	</section>
+  
+	<section id="apply">
+		<h2>Apply to Volunteer</h2>
+		<p>If you are interested in becoming a volunteer, please fill out the application form below:</p>
+		<a href="https://docs.google.com/forms/d/e/1FAIpQLScbdss-sC5MTn_Bdeoj3bJzfgNG2ulp5fmyqozOeJIOtEyTgw/viewform" target="_blank" class="apply-button">Click Here to Apply</a>
+	  </section>
+	  
+  
+	<section id="contact">
+			<h2>Contact Us</h2>
+			<p>If you have any questions or need further information, feel free to reach out to us:</p>
+			<p><i class="fas fa-envelope"></i> Email: info@swasthyaconnect.org</p>
+  			<p><i class="fas fa-phone"></i> Phone: +123 456 7890</p>
+ 			<p><i class="fab fa-twitter"></i> Twitter: @SwasthyaConnect</p>
+			 
+		 <div class="contact-right">
+			 <form>
+				 <input type="text" name="Name" placeholder="Your Name" required >
+				 <input type="email" name="E-mail" placeholder="Your Email" required>
+				 <textarea name="Message" rows="5" placeholder="Your Message"></textarea>
+				 <button type="Submit" class="btn">Submit</button>
+			 </form>
+		 </div>
+	</section>
+	<script src="volunteer.js"></script>
+</body>
 </html>
