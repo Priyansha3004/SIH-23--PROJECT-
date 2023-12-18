@@ -1,0 +1,529 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap");
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css");
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,800");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  background: transparent;
+  width: 0.4rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(173, 173, 173, 0.2);
+  border-radius: 10px;
+  transition: background-color 0.5s ease-in-out;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(173, 173, 173, 0.5);
+}
+
+html {
+  overflow-y: overlay;
+}
+
+.loading-wrapper {
+  background-color: white;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 250;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#loading {
+  z-index: 251;
+  width: 20rem;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+body {
+  font-family: "Poppins";
+  transform: none;
+  overflow: hidden;
+}
+
+.nav {
+  display: flex;
+  padding: 0.5% 4%;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 5;
+  transition: 0.3s ease-in-out;
+  background-color: rgb(255, 255, 255);
+}
+
+/* .nav-active {
+  background-color: #000000ad;
+  backdrop-filter: blur(5px);
+  box-shadow: 5px -1px 12px -5px grey;
+} */
+
+.logo {
+  width: 150px;
+}
+
+.hamburger {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 3px;
+  cursor: pointer;
+  z-index: 50;
+  color: white;
+}
+
+.cancel {
+  display: none;
+}
+
+.hamburger:hover {
+  color: rgb(200, 200, 200);
+}
+
+/* .hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+} */
+
+.links li {
+  list-style: none;
+  display: inline-block;
+  padding: 8px 12px;
+  position: relative;
+}
+
+.links a {
+  color: black;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.links li::after {
+  content: "";
+  width: 0%;
+  height: 3px;
+  background: #6774cd;
+  display: block;
+  margin: auto;
+  transition: 0.5s ease-in-out;
+}
+
+.links li:hover::after {
+  width: 100%;
+}
+
+.login-button {
+  border: none;
+  cursor: pointer;
+  background-color: #6774cd;
+  box-shadow: inset 0 0 0 0 #ea097f;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  transition: ease-out 0.4s;
+  -webkit-transition: ease-out 0.4s;
+  -moz-transition: ease-out 0.4s;
+  -ms-transition: ease-out 0.4s;
+  -o-transition: ease-out 0.4s;
+  /* z-index: -9999; */
+}
+
+.login-button a {
+  display: block;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  color: #fff;
+  height: 2.4rem;
+  width: 7.9rem;
+  letter-spacing: 1px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-button a:hover {
+  color: #ffffff;
+}
+
+.login-button:hover {
+  box-shadow: inset 130px 0 0 0 #ea097f;
+}
+
+.menu {
+  display: none;
+  width: 100%;
+  position: absolute;
+  background-color: #fff;
+  top: 85px;
+  right: 0;
+  padding: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+}
+
+/* .menu.open {
+  display: block;
+  width: 80%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(244, 124, 124, 0.97);
+  top: 0px;
+  left: 0;
+  padding: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+  animation: slideIn 0.5s ease-in-out;
+  z-index: 100;
+} */
+.open {
+  display: block;
+  width: 70%;
+  height: 100%;
+  position: fixed;
+  background-color: rgb(56, 56, 55);
+  top: 0;
+  right: 0;
+  padding: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+  animation: slideIn 0.5s ease-in-out;
+  z-index: 2;
+  margin-top: 15px;
+}
+
+@keyframes slideIn {
+  0% {
+    right: -150px;
+  }
+
+  100% {
+    right: 0px;
+  }
+}
+
+.menu-link {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.menu-link li {
+  padding: 2rem;
+  font-weight: bolder;
+}
+
+.menu-link li:last-child {
+  padding-bottom: 0;
+}
+
+.menu-link li a {
+  color: rgb(247, 245, 245);
+  /* color:rgb(30, 240, 191); */
+  font-weight: bolder;
+  font-size: 1.15rem;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+.menu-link li a:hover {
+  z-index: 150;
+  color: rgb(189, 202, 199);
+  /* border-bottom: #011b24 1px solid; */
+}
+
+/* .content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  color: #fff;
+  margin: auto;
+  text-align: center;
+} */
+
+/* Move the background and make it smaller. */
+/* Animation shown when entering the page and after the hover animation. */
+@keyframes rainbow-text-simple-animation-rev {
+  0% {
+    background-size: 650%;
+  }
+
+  40% {
+    background-size: 650%;
+  }
+
+  100% {
+    background-size: 100%;
+  }
+}
+
+/* Move the background and make it larger. */
+/* Animation shown when hovering over the text. */
+@keyframes rainbow-text-simple-animation {
+  0% {
+    background-size: 100%;
+  }
+
+  80% {
+    background-size: 650%;
+  }
+
+  100% {
+    background-size: 650%;
+  }
+}
+
+/* .content h3 {
+  margin-top: 1rem;
+  color: rgb(0, 0, 0);
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400px;
+  font-size: 10px;
+  line-height: 29px;
+  margin-top: 350px;
+  text-align: center;
+  margin-left: -18px;
+  color: rgb(23, 24, 24);
+  text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+} */
+
+@keyframes slidebg {
+  to {
+    background-position: 8rem;
+  }
+}
+
+.hero-btn {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 12px 34px;
+  font-size: 20px;
+  background: transparent;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.hero-btn:hover {
+  border: #060694;
+  background: #060694;
+  transition: 0.4s;
+}
+
+nav .fa {
+  display: none;
+}
+
+@media screen and (max-width: 800px) {
+  .nav-links {
+    display: none;
+  }
+
+  .logo {
+    width: 60px;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .hamburger i {
+    z-index: 1000000000;
+    display: block;
+    font-size: 25px;
+  }
+}
+
+.footercontent {
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 800px) {
+  .menu.open {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 880px) and (min-width: 700px) {
+  #about h3 {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .content h1 {
+    font-size: 3rem;
+  }
+}
+
+/*hero section*/
+.content1 {
+  color: black;
+  padding-top: 160px;
+}
+
+.main-section {
+  max-width: 1280px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 0.6rem;
+  align-items: center;
+  margin: 0 auto;
+}
+.contact-left {
+  text-align: left;
+  animation: slideFormLeft 2s ease forwards;
+}
+
+@keyframes slideFormLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.section-label {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #6774cd;
+}
+.section-title {
+  font-size: 2.25rem;
+  /* padding: 1.1rem; */
+  color: red;
+}
+.section-title-2 {
+  font-size: 2.25rem;
+  /* padding: 1.1rem; */
+  color: black;
+}
+#with {
+  color: black;
+}
+.section-description {
+  font-size: 1.12rem;
+  color: grey;
+}
+
+.button-group {
+  gap: 2rem;
+  padding: 0rem;
+  padding-top: 2rem;
+  margin-top: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.patient-button,
+.pharmacy-button {
+  /* border: none; */
+  border-radius: 0.375rem;
+  background-color: rgba(128, 128, 128, 0.64);
+  transform: all 0.1s;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+.patient-button {
+  background-color: #6774cd;
+  color: white;
+}
+.pharmacy-button {
+  border-color: black;
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+
+/*image->hero section*/
+.contact-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.image-container {
+  overflow: hidden;
+  height: 57vh;
+}
+.section-image {
+  height: 100%;
+  width: 100%;
+}
+
+/*now for full screen hero section using Media query*/
+@media screen and (min-width: 768px) {
+  .main-section {
+    flex-direction: row;
+  }
+  .contact-left {
+    width: 50%;
+    text-align: left;
+  }
+  .button-group {
+    padding-left: 0px;
+  }
+  .section-title-2 {
+    font-size: 3.25rem;
+  }
+  .section-title {
+    font-size: 4rem;
+  }
+  .section-image {
+    height: 500px;
+    /* width: 700px; */
+  }
+  .pharmacy-button {
+    margin-left: 25px;
+  }
+}

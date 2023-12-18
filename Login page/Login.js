@@ -1,14 +1,44 @@
-let signup = document.querySelector(".signup");
-let login = document.querySelector(".login");
-let slider = document.querySelector(".slider");
-let formSection = document.querySelector(".form-section");
+document.addEventListener("DOMContentLoaded", () => {
+  const loginBtn = document.querySelector(".login-box button");
 
-signup.addEventListener("click", () => {
-	slider.classList.add("moveslider");
-	formSection.classList.add("form-section-move");
+  loginBtn.addEventListener("click", () => {
+    const username = document.querySelector(".username").value;
+    const password = document.querySelector(".password").value;
+
+    //login API endpoint
+    loginUser(username, password);
+  });
 });
 
-login.addEventListener("click", () => {
-	slider.classList.remove("moveslider");
-	formSection.classList.remove("form-section-move");
-});
+async function loginUser(username, password) {
+  const url = "http://localhost:3000/api/login";
+
+  try {
+    const response = await fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        username: username,
+        password: password,
+      }),
+    });
+
+    if (!response.ok) {
+      const data = await response.json();
+      throw new Error(data.message || `HTTP error! Status: ${response.status}`);
+    }
+
+    const data = await response.json();
+    console.log(data);
+
+    // If login successful
+    // Redirect to index.html
+    window.location.href = "/../index.html";
+  } catch (error) {
+    console.error("Error:", error.message);
+    //error goes here
+    alert("Incorrect username or password");
+  }
+}

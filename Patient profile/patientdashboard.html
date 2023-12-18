@@ -1,180 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Patient Dashboard</title>
-    <link rel="stylesheet" href="patientdashboard.css">
-</head>
-<body>
+    <link rel="stylesheet" href="patientdashboard.css" />
+  </head>
+  <body>
     <header class="navbar">
-        <img src=".SC_logo.png" alt="Logo" class="logo">
-        <h1>Patient Dashboard</h1>
-        <span class="logout">Logout</span>
+      <img src=".SC_logo.png" alt="Logo" class="logo" />
+      <h1>Patient Dashboard</h1>
+      <span class="logout">Logout</span>
     </header>
 
     <!-- Navigation Bar -->
     <nav class="main-nav">
-        <ul>
-            <li><a href="#profile">Profile</a></li>
-            <li><a href="#visit-history">Visit History</a></li>
-            <li><a href="#doctor-details">Doctor Details</a></li>
-            <li><a href="#medication">Medication</a></li>
-            <li><a href="#lab-reports">Lab Reports</a></li>
-            <li><a href="#hospitalization">Hospitalization</a></li>
-            <li><a href="#book-appointment">Book an Appointment</a></li>
-            <li><a href="#order-medicine">Order Medicine</a></li>
-        </ul>
+      <ul>
+        <li><a href="#profile">Profile</a></li>
+        <li><a href="#visit-history">Visit History</a></li>
+        <li><a href="#doctor-details">Doctor Details</a></li>
+        <li><a href="#medication">Medication</a></li>
+        <li><a href="#lab-reports">Lab Reports</a></li>
+        <li><a href="#hospitalization">Hospitalization</a></li>
+        <li><a href="#book-appointment">Book an Appointment</a></li>
+        <li><a href="#order-medicine">Order Medicine</a></li>
+      </ul>
     </nav>
 
     <main class="dashboard">
-
-        <!-- Patient Profile Section -->
-        <section id="profile" class="patient-profile">
-            <div class="profile-container">
-                <div class="profile-image">
-                    <img src="download.jpg" alt="Patient Picture">
-                </div>
-                <div class="profile-details">
-                    <h2>Patient Profile</h2>
-                    <p><strong>Name:</strong> John Doe</p>
-                    <p><strong>Age:</strong> 30</p>
-                    <p><strong>Gender:</strong> Male</p>
-                    <p><strong>Date of Birth:</strong> January 1, 1990</p>
-                    <p><strong>Phone Number:</strong> 123-456-7890</p>
-                    <p><strong>Address:</strong> 123 Main St, Cityville</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Scrollable Container for Patient Details -->
-        <div class="scroll-container">
-
-            <!-- Visit History Section -->
-            <section id="visit-history" class="visit-history">
-                <h2>Past Visits</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Date</th>
-                            <th>Department</th>
-                            <th>Consulting Doctor</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>08/10/23</td>
-                            <td>ENT</td>
-                            <td>Dr. Kalra</td>
-                        </tr>
-                        <tr>
-                            <td>14/03/23</td>
-                            <td>Pediatrics</td>
-                            <td>Dr. Pankaj</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
-
-            <!-- Doctor Details Section -->
-            <section id="doctor-details" class="doctor-details">
-                <h2>Consulted Doctors</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Doctor's Name</th>
-                            <th>Specialty</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Dr. Smith</td>
-                            <td>Cardiology</td>
-                        </tr>
-                        <tr>
-                            <td>Dr. Johnson</td>
-                            <td>Orthopedics</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
-
-            <!-- Medication Section -->
-            <section id="medication" class="medication">
-                <h2>Medication</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Medicine Name</th>
-                            <th>Dosage</th>
-                            <th>Schedule</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Aspirin</td>
-                            <td>75mg</td>
-                            <td>Once a day</td>
-                        </tr>
-                        <tr>
-                            <td>Paracetamol</td>
-                            <td>500mg</td>
-                            <td>Every 4 hours</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
-
-            <!-- Lab Report Section -->
-            <section id="lab-reports" class="lab-reports">
-                <h2>Lab Reports</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Test Name</th>
-                            <th>Date</th>
-                            <th>Result</th>
-                            <th>Download</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Blood Test</td>
-                            <td>05/15/23</td>
-                            <td>Normal</td>
-                            <td><a href="download/blood_test_report.pdf" download>Download</a></td>
-                        </tr>
-                        <tr>
-                            <td>Urinalysis</td>
-                            <td>06/02/23</td>
-                            <td>Abnormal</td>
-                            <td><a href="download/urinalysis_report.pdf" download>Download</a></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
-
-            <!-- Hospitalization Section -->
-            <section id="hospitalization" class="hospitalization">
-                <h2>Hospitalization</h2>
-                <p><strong>Date of Admission:</strong> 10/01/23</p>
-                <p><strong>Reason for Admission:</strong> Severe Infection</p>
-                <p><strong>Bed Number:</strong> 203</p>
-                <p><strong>Hourly Updates:</strong> Patient stable, responding well to treatment.</p>
-                <p><strong>Under the Guidance of:</strong> Dr. Anderson</p>
-                <!-- Add more details as needed -->
-            </section>
-
+      <!-- Patient Profile Section -->
+      <section id="profile" class="patient-profile">
+        <div class="profile-container">
+          <div class="profile-image">
+            <img src="download.jpg" alt="Patient Picture" />
+          </div>
+          <div class="profile-details">
+            <h2>Patient Profile</h2>
+            <p><strong>Name:</strong> John Doe</p>
+            <p><strong>Age:</strong> 30</p>
+            <p><strong>Gender:</strong> Male</p>
+            <p><strong>Date of Birth:</strong> January 1, 1990</p>
+            <p><strong>Phone Number:</strong> 123-456-7890</p>
+            <p><strong>Address:</strong> 123 Main St, Cityville</p>
+          </div>
         </div>
+      </section>
 
-        <!-- Appointment and Medicine Options -->
-        <section class="appointment-section">
-            <button id="bookAppointment">Book an Appointment</button>
-            <button id="orderMedicine">Order Medicine</button>
+      <!-- Scrollable Container for Patient Details -->
+      <div class="scroll-container">
+        <!-- Visit History Section -->
+        <section id="visit-history" class="visit-history">
+          <h2>Past Visits</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Department</th>
+                <th>Consulting Doctor</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>08/10/23</td>
+                <td>ENT</td>
+                <td>Dr. Kalra</td>
+              </tr>
+              <tr>
+                <td>14/03/23</td>
+                <td>Pediatrics</td>
+                <td>Dr. Pankaj</td>
+              </tr>
+            </tbody>
+          </table>
         </section>
 
+        <!-- Doctor Details Section -->
+        <section id="doctor-details" class="doctor-details">
+          <h2>Consulted Doctors</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Doctor's Name</th>
+                <th>Specialty</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Dr. Smith</td>
+                <td>Cardiology</td>
+              </tr>
+              <tr>
+                <td>Dr. Johnson</td>
+                <td>Orthopedics</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <!-- Medication Section -->
+        <section id="medication" class="medication">
+          <h2>Medication</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Medicine Name</th>
+                <th>Dosage</th>
+                <th>Schedule</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Aspirin</td>
+                <td>75mg</td>
+                <td>Once a day</td>
+              </tr>
+              <tr>
+                <td>Paracetamol</td>
+                <td>500mg</td>
+                <td>Every 4 hours</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <!-- Lab Report Section -->
+        <section id="lab-reports" class="lab-reports">
+          <h2>Lab Reports</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Test Name</th>
+                <th>Date</th>
+                <th>Result</th>
+                <th>Download</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Blood Test</td>
+                <td>05/15/23</td>
+                <td>Normal</td>
+                <td>
+                  <a href="download/blood_test_report.pdf" download>Download</a>
+                </td>
+              </tr>
+              <tr>
+                <td>Urinalysis</td>
+                <td>06/02/23</td>
+                <td>Abnormal</td>
+                <td>
+                  <a href="download/urinalysis_report.pdf" download>Download</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <!-- Hospitalization Section -->
+        <section id="hospitalization" class="hospitalization">
+          <h2>Hospitalization</h2>
+          <p><strong>Date of Admission:</strong> 10/01/23</p>
+          <p><strong>Reason for Admission:</strong> Severe Infection</p>
+          <p><strong>Bed Number:</strong> 203</p>
+          <p>
+            <strong>Hourly Updates:</strong> Patient stable, responding well to
+            treatment.
+          </p>
+          <p><strong>Under the Guidance of:</strong> Dr. Anderson</p>
+          <!-- Add more details as needed -->
+        </section>
+      </div>
+
+      <!-- Appointment and Medicine Options -->
+      <section class="appointment-section">
+        <button id="bookAppointment">Book an Appointment</button>
+        <button id="orderMedicine">Order Medicine</button>
+      </section>
     </main>
 
     <script src="patientdashboard.js"></script>
-</body>
+  </body>
 </html>

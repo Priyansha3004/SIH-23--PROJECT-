@@ -1,11 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ICU-Patient-Website</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ICU-PATIENT WEBSITE</title>
+    <!-- <link rel="icon" href="/images/favicon-enhanced.png"> -->
+    <link rel="stylesheet" href="./style.css" />
+    <!-- <link rel="manifest" href="manifest.json"> -->
+    <link rel="apple-touch-icon" href="/images/favicon-enhanced.png" />
+    <meta name="theme-color" content="#000000" />
+    <link
+      rel="stylesheet"
+      text="text/CSS"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      text="text/CSS"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .hidden {
+      visibility: hidden;
+    }
+
+    .back-top-wrap {
+      position: fixed;
+      bottom: 5rem;
+      right: 1rem;
+      background-color: #80f7d1;
+      padding: 1rem 1.2rem;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: 0.3s ease-in-out;
+      z-index: 100;
+    }
+
+    .back-top-wrap:hover {
+      background-color: #00a2ff;
+      color: #80f7d1;
+    }
+
+    .back-top-wrap:hover .fas.fa-arrow-up {
+      color: white;
+    }
+
+    .fas.fa-arrow-up {
+      color: #00488f;
+      transition: 0.3s ease-in-out;
+    }
+  </style>
+
+  <body onload="myFunction()">
+    <div class="loading-wrapper">
+      <img src="./logo.png" id="loading" />
+    </div>
+
+    <!-- Back to top button -->
+    <div id="back-top-div" class="back-top-wrap">
+      <i class="fas fa-arrow-up"></i>
+    </div>
+    <header>
+      <nav class="nav" id="nav">
+        <div>
+          <a class="navbar-brand" href="#!">
+            <img src="./images/SC_logo.png" alt="Logo" class="logo"
+          /></a>
+        </div>
+        <div class="nav-links" id="navLinks">
+          <ul class="links" id="navmenu">
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">MEDCIAL REPORTS</a></li>
+            <li><a href="#">SELF CARE </a></li>
+            <li><a href="#">CONTACT US </a></li>
+          </ul>
+        </div>
+        <button class="login-button">
+          <a href="./Login page/login.html">SignUp / Login</a>
+        </button>
+        <div class="hamburger" id="ham">
+          <i class="cancel fa-solid fa-xmark"></i>
+
+          <svg
+            class="burger"
+            stroke="currentColor"
+            fill="currentColor"
+            stroke-width="0"
+            viewBox="0 0 1024 1024"
+            height="1em"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M904 160H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8zm0 624H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8zm0-312H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8z"
+            ></path>
+          </svg>
+        </div>
+      </nav>
+      <div class="menu" id="menu">
+        <ul class="menu-link">
+          <li><a href="#">HOME</a></li>
+          <li><a href="#">MEDCIAL REPORTS</a></li>
+          <li><a href="#">SELF CARE </a></li>
+          <li><a href="#">CONTACT US </a></li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- hero section -->
+    <div class="content1">
+      <section class="main-section">
+        <div class="contact-left">
+          <p class="section-label">Very proud to introduce</p>
+          <h1 class="section-title">GET UPDATED <span id="with">WITH</span></h1>
+          <h1 class="section-title-2">SWASTHYA CONNECT</h1>
+          <p class="section-description">
+            Your Health, Our Priority: Empowering Wellness, One Click at a Time.
+          </p>
+          <div class="button-group">
+            <a href="./Login page/login.html" class="patient-button"
+              >Patient Report</a
+            >
+            <a href="#" class="pharmacy-button">Pharmacy Details</a>
+          </div>
+        </div>
+
+        <div class="contact-right">
+          <div class="image-container">
+            <img
+              src="./images/hero-image.png"
+              alt="sectionImages"
+              class="section-image"
+            />
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      let preloader = document.querySelector(".loading-wrapper");
+      function myFunction() {
+        preloader.style.display = "none";
+        document.body.style.overflow = "auto";
+      }
+      let navbar = document.querySelector("#nav");
+      let navmenu = document.querySelector("#navmenu");
+
+      window.onscroll = function () {
+        if (window.pageYOffset >= navmenu.offsetTop) {
+          navbar.classList.add("sticky");
+        } else {
+          navbar.classList.remove("sticky");
+        }
+      };
+
+      window.onscroll = () => {
+        if (window.scrollY > 100) {
+          navbar.classList.add("nav-active");
+        } else {
+          navbar.classList.remove("nav-active");
+        }
+      };
+    </script>
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker
+            .register("./serviceworker.js")
+            .then((reg) => console.log("Success", reg.scope))
+            .catch((err) => console.log("Error", err));
+        });
+      }
+    </script>
+    <script src="./therapy/contact.html"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
 </html>
