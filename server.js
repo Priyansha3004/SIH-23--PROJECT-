@@ -1,7 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-const { sequelize } = require("./db");
-const routes = require("./routes");
+const { sequelize } = require("./server/db");
+const routes = require("./server/routes");
 
 const app = express();
 const PORT = process.env.PORT || 3000;

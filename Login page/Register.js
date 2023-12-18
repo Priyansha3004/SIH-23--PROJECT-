@@ -10,6 +10,10 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+function redirtoLogin() {
+  window.location.href = "login.html";
+}
+
 async function signupUser(username, password) {
   const url = "http://localhost:3000/api/register";
 
