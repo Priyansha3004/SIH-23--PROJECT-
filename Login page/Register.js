@@ -4,14 +4,35 @@ document.addEventListener("DOMContentLoaded", () => {
   signupBtn.addEventListener("click", () => {
     const createUsername = document.querySelector(".create-username").value;
     const createPassword = document.querySelector(".create-password").value;
+    const confirmPassword = document.querySelector(".confirm-password").value;
 
-    //signup API endpoint call
-    signupUser(createUsername, createPassword);
+    // Check if passwords match
+    if (createPassword !== confirmPassword) {
+      alert("Passwords do not match. Please confirm your password.");
+      return;
+    }
+
+    // Password strength validation
+    if (isPasswordStrong(createPassword)) {
+      // Signup API endpoint here
+      signupUser(createUsername, createPassword);
+    } else {
+      alert(
+        "Password must be at least 8 characters long and include a number and a symbol."
+      );
+    }
   });
 });
 
 function redirtoLogin() {
   window.location.href = "login.html";
+}
+
+function isPasswordStrong(password) {
+  // Min 8 chars, at least one number, at least one symbol
+  const passwordRegex =
+    /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/;
+  return passwordRegex.test(password);
 }
 
 async function signupUser(username, password) {
@@ -36,10 +57,16 @@ async function signupUser(username, password) {
     const data = await response.json();
     console.log(data);
 
-    // If signup successful
-    //do shit here
+    // Display success message
+    const successMessage = document.getElementById("reg-success-message");
+    successMessage.style.display = "block";
+
+    // Redirect to the login page after a delay (e.g., 3 seconds)
+    setTimeout(() => {
+      window.location.href = "../index.html";
+    }, 3000); // Adjust the delay as needed
   } catch (error) {
     console.error("Error:", error.message);
-    //error goes here
+    // Handle error, e.g., show an error message to the user
   }
 }
