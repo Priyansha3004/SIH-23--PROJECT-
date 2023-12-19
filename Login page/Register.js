@@ -18,6 +18,10 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+function redirtoLogin() {
+  window.location.href = "login.html";
+}
+
 function isPasswordStrong(password) {
   // min 8 chars, at least one number, at least one symbol
   const passwordRegex =
