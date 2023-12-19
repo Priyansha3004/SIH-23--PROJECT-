@@ -32,7 +32,8 @@ accItems.forEach((acc) => acc.addEventListener("click", toggleAcc));
 
 function toggleAcc() {
   // remove active class from all items exept the current item (this)
-  accItems.forEach((item) => item != this ? item.classList.remove("accordion__item--active") : null
+  accItems.forEach((item) =>
+    item != this ? item.classList.remove("accordion__item--active") : null
   );
 
   // toggle active class on current item
@@ -40,7 +41,6 @@ function toggleAcc() {
     this.classList.toggle("accordion__item--active");
   }
 }
-
 
 const backTopElement = document.getElementById("back-top-div");
 const minScolledAmountToBackTop = 800;
@@ -56,6 +56,39 @@ window.addEventListener("scroll", () => {
 const backTop = () => {
   window.scrollTo(0, 0);
 };
+
+function redirectToProfile() {
+  // Get the current page's pathname
+  const currentPage = window.location.pathname;
+
+  // Check if the user is trying to access the "profile.html" page
+  if (currentPage.includes("/Patient profile/profile.html")) {
+    // Check if the user has an active token
+    const isTokenPresent = checkTokenPresence();
+
+    if (isTokenPresent) {
+      // Check if the token is still valid
+      const isTokenValid = checkTokenValidity();
+
+      if (isTokenValid) {
+        // User is logged in and the token is valid then allow access
+        alert("token active");
+        return;
+      } else {
+        // Token is present but expired
+        showLoginPrompt();
+        return;
+      }
+    } else {
+      // Token is not present
+      alert("token not present");
+      showLoginPrompt();
+      return;
+    }
+  }
+}
+
+redirectToProfile();
 
 backTopElement.addEventListener("click", backTop);
 ham.addEventListener("click", toggleMenu);

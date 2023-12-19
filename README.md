@@ -16,6 +16,7 @@ To install the necessary dependencies, use npm:
 
 ```bash
 npm install
+npm install bcrypt jsonwebtoken
 ```
 
 To run:
