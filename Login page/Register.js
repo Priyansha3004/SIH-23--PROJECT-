@@ -4,13 +4,19 @@ document.addEventListener("DOMContentLoaded", () => {
   signupBtn.addEventListener("click", () => {
     const createUsername = document.querySelector(".create-username").value;
     const createPassword = document.querySelector(".create-password").value;
+    const confirmPassword = document.querySelector(".confirm-password").value;
 
-    // password strength validation function
+    // Check if passwords match
+    if (createPassword !== confirmPassword) {
+      alert("Passwords do not match. Please confirm your password.");
+      return;
+    }
+
+    // Password strength validation
     if (isPasswordStrong(createPassword)) {
-      // signup API endpoint here
+      // Signup API endpoint here
       signupUser(createUsername, createPassword);
     } else {
-      // error message for weak password
       alert(
         "Password must be at least 8 characters long and include a number and a symbol."
       );
@@ -23,7 +29,7 @@ function redirtoLogin() {
 }
 
 function isPasswordStrong(password) {
-  // min 8 chars, at least one number, at least one symbol
+  // Min 8 chars, at least one number, at least one symbol
   const passwordRegex =
     /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/;
   return passwordRegex.test(password);
@@ -57,7 +63,7 @@ async function signupUser(username, password) {
 
     // Redirect to the login page after a delay (e.g., 3 seconds)
     setTimeout(() => {
-      window.location.href = "login.html";
+      window.location.href = "../index.html";
     }, 3000); // Adjust the delay as needed
   } catch (error) {
     console.error("Error:", error.message);

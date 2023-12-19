@@ -24,9 +24,20 @@
             class="create-password ele"
             placeholder="Create Password"
           />
-          <button class="clkbtn">Signup</button>
-          <button class="clkbtn" onclick= "redirtoLogin()">Login</button>
-          <div id="reg-success-message" style="display: none; color: rgb(0, 75, 128); margin-top: 10px;">Successfully registered! You can now log in.</div>
+          <!-- New input field for confirming password -->
+          <input
+            type="password"
+            class="confirm-password ele"
+            placeholder="Confirm Password"
+          />
+          <button class="clkbtn" onclick="signup()">Signup</button>
+          <button class="clkbtn" onclick="redirtoLogin()">Login</button>
+          <div
+            id="reg-success-message"
+            style="display: none; color: rgb(0, 75, 128); margin-top: 10px;"
+          >
+            Successfully registered! You can now log in.
+          </div>
         </div>
       </div>
     </div>
