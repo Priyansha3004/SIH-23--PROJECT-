@@ -1,4 +1,4 @@
-/* Global Styles */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
 * {
     box-sizing: border-box;
     margin: 0;
@@ -13,6 +13,20 @@
     background-color: #f5f8fa; /* Light blue background */
   }
   
+  body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("./Loginbg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.6;
+    z-index: -1;
+  }
   
   a {
     text-decoration: none;
@@ -28,17 +42,11 @@
   p {
     margin-bottom: 20px;
   }
-  
+
   ul, ol {
     list-style-type: none;
     margin: 0;
     padding: 0;
-  }
-  
-  img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 20px;
   }
   
   /* Grid System */
@@ -77,6 +85,7 @@
   
   .nav {
     display: flex;
+    padding: 20px;
     justify-content: space-between;
     align-items: center;
     margin-right: 20px;
@@ -84,6 +93,7 @@
   
   .nav li {
     margin-left: 20px;
+
   }
   
   .nav a {
@@ -146,7 +156,7 @@
   
   .main-nav ul {
     list-style-type: none;
-    padding: 0;
+    padding: 20px;
   }
   
   .main-nav li {
@@ -179,7 +189,7 @@
   .dashboard:hover {
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
   }
-  
+ 
   .patient-profile {
     background-color: #f5f8fa;
     padding: 20px;
@@ -196,29 +206,88 @@
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   }
   
-  .profile-image img {
-    width: 100px;
-    border-radius: 50%;
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .profile-image img:hover {
-    transform: scale(1.1);
-  }
-  
   .profile-details {
     width: 60%;
   }
   
-  .scroll-container {
-    overflow-y: auto;
+  /* Status bar styles */
+  .status-bar {
+    display: flex;
+    align-items: left;
+    margin-top: auto;
   }
   
+  .status-button {
+    padding: 8px 16px;
+    background-color: #28a745;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: -50px;
+    margin-bottom: 20px;
+  }
+  
+  .status-button.red {
+    background-color: #dc3545;
+  }
+  
+  .status-button.orange {
+    background-color: #ffc107;
+  }
+  
+  .status-button.gray {
+    background-color: #6c757d;
+  }
+  
+  /* Action buttons styles */
+  .action-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align action buttons on the left side */
+  }
+  
+  .action-button {
+    padding: 10px 20px;
+    background-color: #007bb5;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    margin-bottom: 10px; /* Equal spacing between buttons */
+  }
+  
+  .action-button:hover {
+    background-color: #005d8e;
+  }
+  
+  .action-button.secondary {
+    background-color: #6c757d;
+  }
+  
+  .action-button.warning {
+    background-color: #ffc107;
+  }
+  
+.restricted {
+  /* Styling for the restricted span */
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: #dc3545; /* Red background color for restriction */
+  color: #fff; /* White text color */
+  border-radius: 3px;
+  font-weight: bold;
+}
+
+/* Add more styles as needed for different action buttons */
+
   .visit-history,
   .doctor-details,
   .medication,
   .lab-reports,
-  .hospitalization {
+  .hospitalization,
+  .updates
+  .Diet {
     background-color: #f5f8fa;
     padding: 20px;
     margin-bottom: 20px;
@@ -231,8 +300,10 @@
   .doctor-details:hover,
   .medication:hover,
   .lab-reports:hover,
-  .hospitalization:hover {
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  .hospitalization:hover,
+  .updates:hover, 
+  .Diet:hover{
+    box-shadow: 0 0 15px #6c757d;
   }
   
   table {
@@ -278,6 +349,3 @@
   button:hover {
     background-color: #005d8e;
   }
-  
-  /* Responsive Styles
-  

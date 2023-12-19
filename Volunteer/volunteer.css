@@ -1,182 +1,133 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
-
-body {
-  font-family: 'Arial', sans-serif;
-  background-color: #f4f4f4;
-  color: #333;
-  margin: 0;
-  padding: 0;
-  text-align: left;
-  background-color: #F5F5DC;
-}
-
-header.navbar {
-  background-color: #A977F7;
-  color: #f4f4f4;
-  padding: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-header.navbar img.logo {
-  width: 100px;
-  height: auto;
-}
-
 nav {
-  background-color: #C4A1FA;
-  padding: 10px;
+  background-color: #333; /* Background color for the navigation bar */
+  overflow: hidden;
+  color: white;
   text-align: center;
 }
 
-nav a {
-  color: #f4f4f4;
-  text-decoration: none;
-  margin: 0 15px;
-  font-weight: bold;
+/* Style for the logo on the left */
+.logo {
+  float: left;
+  padding: 15px;
+  font-size: 20px;
 }
 
-section {
-  padding: 20px;
-  margin: 5px;
-  background-color: #f4f4f4;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+/* Style for the text in the center */
+.title {
+  padding: 15px;
+  font-size: 24px;
 }
 
-h1 {
-  color: #f4f4f4;
-  margin: auto;
-  font-size: 2.3rem;
-}
-  h2 {
-  color:black;
-  margin: auto;
-}
-h2 {
-  color:#B183F8;
-  margin: auto;
-}
-iframe {
-  width: 100%;
-  height: 500px;
-  border: none;
-}
-
-section img {
-  display: block;
-  margin: 0 auto;
-}
-
-#contact {
-  background-color: #F5F5DC;
-  text-align: auto;
-  padding: 50px;
-  background-color: #f4f4f4;
-}
-
-#contact h2 {
-  color: #B183F8;
-}
-
-#contact p {
-  margin: 10px 0;
-}
-
-#contact p i {
-  margin-right: 5px;
-}
-
-#contact .contact-right {
-  margin-top: 20px;
-}
-
-#contact form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-#contact input,
-#contact textarea {
-  width: 100%;
-  padding: 10px;
-  margin: 10px 0;
-  box-sizing: border-box;
-}
-
-#contact button {
-  background-color: #B183F8;
-  color: #fff;
-  padding: 10px 20px;
+/* Style for the login button on the right */
+.login {
+  float: right;
+  padding: 15px;
+  font-size: 18px;
+  background-color: #4CAF50; /* Green background color for the button */
+  color: white;
   border: none;
   cursor: pointer;
 }
-
-#contact p i {
-  margin-right: 5px;
-  color: #B183F8; 
+nav.navbar2 {
+  background-color: #555; /* Background color for the second navigation bar */
+  overflow: hidden;
+  text-align: center;
 }
 
-#contact p i.fa-envelope {
-  color: darkblue; 
+/* Style for the navigation links */
+nav.navbar2 a {
+  display: inline-block;
+  padding: 15px;
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
 }
 
-#contact p i.fa-phone {
-  color: black; 
+/* Change color on hover */
+nav.navbar2 a:hover {
+  background-color: #777;
 }
 
-#contact p i.fa-twitter {
-  color: #1da1f2; 
+/* Style for the home section */
+section.home {
+  text-align: center;
+  padding: 50px;
 }
 
-#apply {
+/* Style for the heading in the home section */
+section.home h2 {
+  font-size: 36px;
+  color: #333;
+}
+
+/* Style for the paragraph in the home section */
+section.home p {
+  font-size: 18px;
+  color: #666;
+  margin-top: 20px;
+}
+
+/* Style for the home link */
+section.home a {
+  display: inline-block;
+  padding: 10px 20px;
+  text-decoration: none;
+  background-color: #4285f4; /* Google Blue */
+  color: white;
+  font-size: 18px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+/* Change color on hover */
+section.home a:hover {
+  background-color: #3367d6; /* Darker Google Blue on hover */
+}
+
+section.about {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   text-align: left;
+  padding: 50px;
 }
 
-.apply-button {
-  display: inline-block;
-  margin-bottom: 10px;
-  padding: 10px 20px;
-  background-color: #B183F8;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
-  transition: background-color 0.3s;
-  margin-right: auto; 
-  margin-left: 0;
+/* Style for the left and right content */
+section.about .content {
+  flex: 1;
 }
 
-.apply-button:hover {
-  background-color: #B183F8;
+/* Style for the paragraphs in the about section */
+section.about p {
+  font-size: 18px;
+  color: #333;
 }
 
-section#apply img {
-  max-width: 20%;
-  height: auto; 
-  margin-left: 0;
-  margin-right: 0;
-  display: block;  
+/* Style for the images in the about section */
+section.about img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 20px;
 }
 
-section#apply h2,
-section#apply p {
-width: 100%;
-text-align: left;
-}
-
-#home {
-  background-image: url('Silhouette peopel.jpg');
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  color: black; 
+section.apply {
   text-align: center;
-  padding: 150px; 
+  padding: 50px;
+}
+
+/* Style for the apply button */
+section.apply button {
+  padding: 15px 30px;
+  font-size: 18px;
+  background-color: #4285f4; /* Google Blue */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Change color on hover */
+section.apply button:hover {
+  background-color: #3367d6; /* Darker Google Blue on hover */
 }
 

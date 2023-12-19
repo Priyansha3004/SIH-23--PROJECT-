@@ -1,27 +1,40 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Event listeners for buttons
-    document.getElementById('bookAppointment').addEventListener('click', function() {
-        alert('Book Appointment button clicked!');
-    });
+  // Responsive navigation toggle
+  function toggleNav() {
+    var nav = document.getElementById('main-nav');
+    nav.classList.toggle('responsive');
+  }
 
-    document.getElementById('orderMedicine').addEventListener('click', function() {
-        alert('Order Medicine button clicked!');
-    });
-
-    // Event listeners for table rows
-    var tableRows = document.querySelectorAll('.visit-history tbody tr, .doctor-details tbody tr, .medication tbody tr, .lab-reports tbody tr');
-    tableRows.forEach(function(row) {
-        row.addEventListener('mouseover', function() {
-            this.style.backgroundColor = '#ecf0f1'; // Light gray background on mouseover
+  // Toggle active class on selected navigation item
+  document.addEventListener('DOMContentLoaded', function () {
+    var links = document.querySelectorAll('.main-nav a');
+    links.forEach(function (link) {
+      link.addEventListener('click', function () {
+        links.forEach(function (el) {
+          el.classList.remove('active');
         });
+        this.classList.add('active');
+      });
+    });
+  });
 
-        row.addEventListener('mouseout', function() {
-            this.style.backgroundColor = ''; // Remove background color on mouseout
-        });
+  // Tab switching function
+  function switchTab(tabId) {
+    var tabs = document.querySelectorAll('.dashboard section');
+    tabs.forEach(function (tab) {
+      tab.style.display = 'none';
     });
 
-    // Event listener for scroll
-    window.addEventListener('scroll', function() {
-        console.log('Scrolled!');
-    });
-});
+    var selectedTab = document.getElementById(tabId);
+    if (selectedTab) {
+      selectedTab.style.display = 'block';
+    }
+  }
+
+  // Update patient status function
+  function updatePatientStatus(newStatus) {
+    var statusElement = document.getElementById('admissionStatus');
+    if (statusElement) {
+      statusElement.textContent = newStatus;
+      statusElement.className = newStatus.toLowerCase() === 'admitted' ? 'admitted-status' : 'discharged-status';
+    }
+  }

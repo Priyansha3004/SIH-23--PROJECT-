@@ -1,65 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Volunteer Dashboard</title>
-  <link rel="stylesheet" href="volunteer.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" text="text/CSS" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400;700&display=swap" rel="stylesheet" />
+	<link href="volunteer.css" rel="stylesheet"/>
 </head>
-
 <body>
-	<header class="navbar">
-        <img src="logo.png" alt="Logo" class="logo">
-        <h1>Volunteer Dashboard</h1>
-	</header>
-	<nav>
-	  	<a href="#home">Home</a>
-	  	<a href="#about">About Us</a>
-	  	<a href="#opportunities">Volunteer Opportunities</a>
-	  	<a href="#apply">Apply to Volunteer</a>
-	  	<a href="#contact">Contact Us</a>
-	</nav>
-  
-	<section id="home">
-	  <h2><strong>Welcome to the Hospital Volunteer Program</strong></h2>
-	  <p>"Thank you for your interest in volunteering at our hospital through Swasthya Connect. Your support makes a significant difference!"</p>
-	</section>
-  
-	<section id="about">
-    <h2>About Swasthya Connect</h2>
-    <p>Swasthya Connect is a platform that connects passionate individuals with opportunities to volunteer at our hospital. We believe in the power of community service and the positive impact it can have on healthcare.</p>
-	</section>
-  
-	<section id="opportunities">
-	  <h2>Volunteer Opportunities</h2>
-	  <p>Explore the various opportunities available for volunteering at our hospital. Whether you're interested in patient care, administration, or community outreach, we have a place for you.</p>
-    <img src="volunteer.jpg" alt="Volunteer Opportunities Image">
-	</section>
-  
-	<section id="apply">
-		<h2>Apply to Volunteer</h2>
-		<p>If you are interested in becoming a volunteer, please fill out the application form below:</p>
-		<a href="https://docs.google.com/forms/d/e/1FAIpQLScbdss-sC5MTn_Bdeoj3bJzfgNG2ulp5fmyqozOeJIOtEyTgw/viewform" target="_blank" class="apply-button">Click Here to Apply</a>
-	  </section>
-	  
-  
-	<section id="contact">
-			<h2>Contact Us</h2>
-			<p>If you have any questions or need further information, feel free to reach out to us:</p>
-			<p><i class="fas fa-envelope"></i> Email: info@swasthyaconnect.org</p>
-  			<p><i class="fas fa-phone"></i> Phone: +123 456 7890</p>
- 			<p><i class="fab fa-twitter"></i> Twitter: @SwasthyaConnect</p>
-			 
-		 <div class="contact-right">
-			 <form>
-				 <input type="text" name="Name" placeholder="Your Name" required >
-				 <input type="email" name="E-mail" placeholder="Your Email" required>
-				 <textarea name="Message" rows="5" placeholder="Your Message"></textarea>
-				 <button type="Submit" class="btn">Submit</button>
-			 </form>
-		 </div>
-	</section>
-	<script src="volunteer.js"></script>
+
+    <!-- Navigation bar -->
+<nav>
+
+    <!-- Logo on the left -->
+    <div class="logo">Logo</div>
+    
+    <!-- Text in the center -->
+    <div class="title">Volunteer Dashboard</div>
+
+    <!-- Login button on the right -->
+    <button class="login">Login</button>
+
+</nav>
+
+	<!--Seconf nav bar -->
+<nav class="navbar2">
+		
+	<a href="#">Home</a>
+	<a href="#">About</a>
+	<a href="#">Apply</a>
+	<a href="#">Contact</a>
+
+</nav>
+
+<section class="about">
+    <!-- Left content - Weekly Summer Camps -->
+    <div class="content">
+        <h2>Weekly Summer Camps</h2>
+        <p>🌐 Welcome to Our Weekly Health Empowerment Initiatives!<br>
+            At Swastya Connect, we are dedicated to fostering community well-being. Every Sunday, we host dynamic health camps designed to provide essential healthcare services to all.</p>
+        <!-- Image for Weekly Summer Camps (replace "path/to/image1.jpg" with the actual image path) -->
+        <img src="path/to/image1.jpg" alt="Weekly Summer Camps Image">
+    </div>
+
+    <!-- Right content - Internship Opportunities -->
+    <div class="content">
+        <h2>Internship Opportunities</h2>
+        <p>👥 Internship Program Highlights:<br>
+            Practical exposure in a real healthcare setting.<br>
+            Mentorship from seasoned professionals.<br>
+            Contribution to community mental health initiatives.<br>
+            Integration of theoretical knowledge with hands-on experience.<br>
+            Join us in building a healthier future! Explore the intersection of education and practical application, making a meaningful impact on lives.</p>
+        <!-- Image for Internship Opportunities (replace "path/to/image2.jpg" with the actual image path) -->
+        <img src="path/to/image2.jpg" alt="Internship Opportunities Image">
+    </div>
+</section>
+
+<!-- Apply Section -->
+<section class="apply">
+    <h2>Apply</h2>
+    <!-- Button to apply (redirects to the specified link on click) -->
+    <button onclick="window.location.href='https:/docs.google.com/forms/d/e/1FAIpQLScbdss-sC5MTn_Bdeoj3bJzfgNG2ulp5fmyqozOeJIOtEyTgw/viewform?usp=sf_link'">
+        Click here to apply
+    </button>
+</section>
+
+<!--Contact section -->
 </body>
 </html>
