@@ -1,0 +1,351 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #444;
+    background-color: #f5f8fa; /* Light blue background */
+  }
+  
+  body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("./Loginbg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.6;
+    z-index: -1;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #3498db; /* Blue link color */
+  }
+  
+  h1, h2, h3 {
+    font-weight: bold;
+    color: #3498db; /* Blue header color */
+    margin-bottom: 10px;
+  }
+  
+  p {
+    margin-bottom: 20px;
+  }
+
+  ul, ol {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Grid System */
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .grid-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .grid-item:nth-child(even) {
+    background-color: #f5f8fa; /* Light blue background for even items */
+  }
+  
+  /* Header Styles */
+  header {
+    background-color: #3498db; /* Main blue color for the header */
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
+  }
+  
+  .logo {
+    display: inline-block;
+    font-size: 24px;
+    margin: 0 20px;
+    color: #fff; /* White logo color */
+  }
+  
+  .nav {
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 20px;
+  }
+  
+  .nav li {
+    margin-left: 20px;
+
+  }
+  
+  .nav a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  
+  .nav a:hover {
+    color: #ecf0f1; /* Lighter color on hover */
+  }
+  
+  /* Hospital Website Styles */
+  .navbar {
+    background-color: #007bb5; /* Dark blue color for the header */
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    position: relative;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .logo {
+    width: 40px;
+    height: auto;
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .logo:hover {
+    transform: scale(1.1);
+  }
+  
+  h1 {
+    margin: 0;
+    color: #fff;
+  }
+  
+  .logout {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #fff;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .logout:hover {
+    color: #ccd8e2;
+  }
+  
+  .main-nav {
+    background-color: #007bb5;
+    text-align: center;
+  }
+  
+  .main-nav ul {
+    list-style-type: none;
+    padding: 20px;
+  }
+  
+  .main-nav li {
+    display: inline;
+    margin-right: 20px;
+  }
+  
+  .main-nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .main-nav a:hover {
+    color: #ccd8e2;
+  }
+  
+  .dashboard {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  
+  .dashboard:hover {
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+  }
+ 
+  .patient-profile {
+    background-color: #f5f8fa;
+    padding: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  
+  .patient-profile:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .profile-details {
+    width: 60%;
+  }
+  
+  /* Status bar styles */
+  .status-bar {
+    display: flex;
+    align-items: left;
+    margin-top: auto;
+  }
+  
+  .status-button {
+    padding: 8px 16px;
+    background-color: #28a745;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: -50px;
+    margin-bottom: 20px;
+  }
+  
+  .status-button.red {
+    background-color: #dc3545;
+  }
+  
+  .status-button.orange {
+    background-color: #ffc107;
+  }
+  
+  .status-button.gray {
+    background-color: #6c757d;
+  }
+  
+  /* Action buttons styles */
+  .action-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align action buttons on the left side */
+  }
+  
+  .action-button {
+    padding: 10px 20px;
+    background-color: #007bb5;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    margin-bottom: 10px; /* Equal spacing between buttons */
+  }
+  
+  .action-button:hover {
+    background-color: #005d8e;
+  }
+  
+  .action-button.secondary {
+    background-color: #6c757d;
+  }
+  
+  .action-button.warning {
+    background-color: #ffc107;
+  }
+  
+.restricted {
+  /* Styling for the restricted span */
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: #dc3545; /* Red background color for restriction */
+  color: #fff; /* White text color */
+  border-radius: 3px;
+  font-weight: bold;
+}
+
+/* Add more styles as needed for different action buttons */
+
+  .visit-history,
+  .doctor-details,
+  .medication,
+  .lab-reports,
+  .hospitalization,
+  .updates
+  .Diet {
+    background-color: #f5f8fa;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  
+  .visit-history:hover,
+  .doctor-details:hover,
+  .medication:hover,
+  .lab-reports:hover,
+  .hospitalization:hover,
+  .updates:hover, 
+  .Diet:hover{
+    box-shadow: 0 0 15px #6c757d;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  table,
+  th,
+  td {
+    border: 1px solid #ddd;
+  }
+  
+  th,
+  td {
+    padding: 12px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #007bb5;
+    color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+  }
+  
+  .appointment-section {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  button {
+    background-color: #007bb5;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  button:hover {
+    background-color: #005d8e;
+  }
