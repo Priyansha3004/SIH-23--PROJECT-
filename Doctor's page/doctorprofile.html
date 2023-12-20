@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Profile - Dr. Jane Smith</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        nav {
+            background-color: #333;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5em 1em;
+        }
+
+        nav img {
+            height: 30px;
+            width: 30px;
+            margin-right: 10px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px;
+        }
+
+        main {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        section {
+            background-color: #eee;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            width: 45%;
+        }
+
+        h2, h3 {
+            color: #333;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #confirmationContainer {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 999;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <img src="your-logo.png" alt="Logo">
+        <a href="#">Patient Profile</a>
+        <a href="#">Logout</a>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Dr. Jane Smith</h2>
+            <p><strong>Specialty:</strong> Cardiology</p>
+            <p><strong>Contact:</strong> <a href="mailto:drjanesmith@example.com">drjanesmith@example.com</a> | (+91) 9911XXXXXX</p>
+            <p><strong>Registration Number:</strong> XXXXXXX</p>
+        </section>
+
+        <section>
+            <h2>Doctor's Schedule</h2>
+            <p><strong>Monday:</strong> 9:00 AM - 5:00 PM</p>
+            <p><strong>Tuesday:</strong> 9:00 AM - 5:00 PM</p>
+            <p><strong>Wednesday:</strong> 9:00 AM - 1:00 PM</p>
+            <!-- Add more days and timings as needed -->
+        </section>
+    </main>
+
+    <main>
+        <section>
+            <h2>Education and Experience</h2>
+            <h3>Education</h3>
+            <ul>
+                <li>Medical School: XYZ Medical College</li>
+                <li>Residency: ABC Hospital</li>
+            </ul>
+
+            <h3>Experience</h3>
+            <ul>
+                <li>Cardiologist at XYZ Cardiology Clinic</li>
+                <li>Associate Cardiologist at ABC Hospital</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Book an Appointment</h2>
+            <p>Select a date and time:</p>
+            <input type="datetime-local" id="appointmentDateTime" required>
+            <button id="bookAppointmentBtn">Book Appointment</button>
+        </section>
+    </main>
+
+    <div id="confirmationContainer"></div>
+
+    <script>
+        document.getElementById("bookAppointmentBtn").addEventListener("click", function () {
+            const selectedDateTime = document.getElementById("appointmentDateTime").value;
+            if (!selectedDateTime) {
+                alert("Please select a date and time for the appointment.");
+            } else {
+                const confirmationMessage = `Your appointment has been booked for: ${selectedDateTime}. Thank you for booking!`;
+                document.getElementById("confirmationContainer").innerHTML = `<p>${confirmationMessage}</p>`;
+                document.getElementById("confirmationContainer").style.display = "block";
+            }
+        });
+    </script>
+</body>
+
+</html>
